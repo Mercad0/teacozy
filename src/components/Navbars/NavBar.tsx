@@ -10,11 +10,13 @@ function NavBar() {
     <>
       <nav className="h-16 fixed border-b bg-black border-b-white w-full shadow-md font-bold z-50 text-white">
         <div className="flex items-center justify-between">
-          <img
-            className="h-14 pt-2 px-4 transform hover:scale-105"
-            src="https://content.codecademy.com/courses/freelance-1/unit-4/img-tea-cozy-logo.png?_gl=1*1hzum4a*_ga*ODc5NTYxNDkyMy4xNjcwODcxMzAw*_ga_3LRZM6TM9L*MTY3ODIxOTg5My4zNS4xLjE2NzgyMTk5MjkuMjQuMC4w"
-            alt="logo"
-          />
+          <picture>
+            <img
+              className="h-14 pt-2 px-4 transform hover:scale-105"
+              src="https://content.codecademy.com/courses/freelance-1/unit-4/img-tea-cozy-logo.png?_gl=1*1hzum4a*_ga*ODc5NTYxNDkyMy4xNjcwODcxMzAw*_ga_3LRZM6TM9L*MTY3ODIxOTg5My4zNS4xLjE2NzgyMTk5MjkuMjQuMC4w"
+              alt="logo"
+            />
+          </picture>
           <ul className="hidden space-x-7 pr-4 text-2xl md:flex">
             <li className="transform hover:scale-105 border-b-2">
               <Link href="#mission" className="hover:text-orange-600">
