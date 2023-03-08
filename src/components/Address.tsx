@@ -1,26 +1,38 @@
-interface CardProps {
-    city?: string;
-    street?: string;
-    suite?: string;
-    state?: string;
-    
-}
+import AddressCard from "./Cards/AddressCard";
 
-function Address({
-    city = "Downtown",
-    street = "123 Main St",
-    suite = "suite 123",
-    state = "NY, NY",
- }: CardProps) {
+function Address() {
+  const MoreAdresses = [
+    {
+      city: "Downtown",
+      street: "384 West 4th St",
+      suite: "Suie 108",
+      state: "Portland, Maine",
+    },
+    {
+      city: "East Bayside",
+      street: "3433 Phisherman's Ave",
+      suite: "(Northwest Corner)",
+      state: "Portland, Maine",
+    },
+    {
+      city: "Oakdale",
+      street: "515 Crescent Avenue",
+      suite: "Second, Floor",
+      state: "Portland, Maine",
+    },
+  ];
   return (
-    <div className="w-72 h-60 bg-black p-4 rounded-lg text-center flex-wrap transition-all hover:scale-[1.02] opacity-75 hover:opacity-100">
-    <h3 className="text-4xl font-bold mb-4">{city}</h3>
-    <p className="text-xl font-light mb-6">{street}</p>
-    <p className="text-xl font-light mb-6">{suite}</p>
-    <p className="text-xl font-light mb-4">{state}</p>
-  </div>
-  )
+    <div className="md:flex md:gap-10 gap-2">
+      {MoreAdresses.map((address) => (
+        <AddressCard
+          key={address.city}
+          street={address.city}
+          suite={address.suite}
+          state={address.state}
+        />
+      ))}
+    </div>
+  );
 }
 
-export default Address
-
+export default Address;
