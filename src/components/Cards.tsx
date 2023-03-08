@@ -29,6 +29,11 @@ function Cards() {
     },
   ];
   return (
+    <div className="flex flex-col items-center justify-center">
+    <h2 className="text-5xl mt-24 font-bold py-2 text-orange-700" id="featuredTeas">
+    Tea of the Month
+  </h2>
+  <h3 className="text-2xl font-light text-orange-500">What's Steeping at The Tea Cozy?</h3>
       <div className="mt-12 h-full max-w-screen flex flex-wrap justify-around gap-10">
         {TeaList.map((cards) => (
           <TeaCard
@@ -38,6 +43,7 @@ function Cards() {
             src={cards.src}
           />
         ))}
+      </div>
       </div>
   );
 }

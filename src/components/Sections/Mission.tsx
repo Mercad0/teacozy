@@ -20,6 +20,7 @@ function Mission({
           alt={alt}
           width={800}
           height={100}
+          priority={true}
           className="md:h-[700px] md:w-[1100px] w-96 h-80" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-black w-full py-2">
           <h2 className="md:text-4xl text-xl font-bold">{title}</h2>

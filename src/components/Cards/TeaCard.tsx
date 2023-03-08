@@ -13,7 +13,14 @@ function TeaCard({
 }: CardProps) {
   return (
     <div className="text-white flex flex-col md:w-96 md:h-80 w-72 h-60 text-center transition-all hover:scale-[1.06] mx-auto rounded-lg overflow-hidden hover:shadow-md hover:shadow-orange-500 shadow-md shadow-orange-800">
-      <Image src={src} alt={alt} width={400} height={50} className="pb-2 md:pb-3"/>
+      <Image
+        src={src}
+        alt={alt}
+        width={400}
+        height={50}
+        className="pb-2 md:pb-3"
+        priority={true}
+      />
       <div className="text-2xl">
         <p className=" align-middle">{title}</p>
       </div>
