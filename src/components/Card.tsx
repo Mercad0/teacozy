@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface CardProps {
     title?: string;
     src?: string;
@@ -14,9 +12,9 @@ interface CardProps {
     alt = "Amazing Tea"
  }: CardProps) {
   return (
-    <div className="w-80 h-52 text-center m-8">
-    <img src={src} alt={alt} className="mb-2 w-full"/>
-    <h3 className="text-2xl font-bold">{title}</h3>
+    <div className="w-80 h-52 text-center m-8 transition-all hover:scale-[1.06]">
+    <img src={src} alt={alt} className="mb-2 w-full rounded-md"/>
+    <h3 className="text-2xl font-bold hover:border-b-2">{title}</h3>
   </div>
   )
 }
