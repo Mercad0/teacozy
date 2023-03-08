@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CardProps {
   title?: string;
   src?: string;
@@ -10,12 +12,10 @@ function TeaCard({
   alt = "Amazing Tea",
 }: CardProps) {
   return (
-    <div className="text-white flex flex-col md:w-96 md:h-80 w-72 h-60 text-center transition-all hover:scale-[1.06] mx-auto rounded-lg overflow-hidden hover:shadow-md hover:shadow-orange-500">
-      <picture>
-        <img src={src} alt={alt} className="mb-2 w-full h-72" />
-      </picture>
-      <div className="text-2xl py-4">
-        <p>{title}</p>
+    <div className="text-white flex flex-col md:w-96 md:h-80 w-72 h-60 text-center transition-all hover:scale-[1.06] mx-auto rounded-lg overflow-hidden hover:shadow-md hover:shadow-orange-500 shadow-md shadow-orange-800">
+      <Image src={src} alt={alt} width={400} height={50} className="pb-2 md:pb-3"/>
+      <div className="text-2xl">
+        <p className=" align-middle">{title}</p>
       </div>
     </div>
   );
